@@ -1,0 +1,54 @@
+#include <iostream>
+#include <Windows.h>
+#include <conio.h>
+using namespace std;
+
+void gotoxy(int column, int line)
+{
+	COORD coord;
+	coord.X = column;
+	coord.Y = line;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+int main() {
+	char key = 0;
+	int x = 5, y = 5;
+	gotoxy(x, y);
+	cout << '#';
+	while (true) {
+		key = _getch();
+		//cout << "You entered:" << key << " (" << (int)key << ")\n";
+		switch (key)
+		{
+		case 'd':
+			gotoxy(x, y);
+			cout << ' ';
+			gotoxy(++x, y);
+			cout << '#';
+			break;
+		case 's':
+			gotoxy(x, y);
+			cout << ' ';
+			gotoxy(x, ++y);
+			cout << '#';
+			break;
+		case 'a':
+			gotoxy(x, y);
+			cout << ' ';
+			gotoxy(--x, y);
+			cout << '#';
+			break;
+		case 'w':
+			gotoxy(x, y);
+			cout << ' ';
+			gotoxy(x, --y);
+			cout << '#';
+			break;
+		default:
+			break;
+		}
+	}
+	system("pause>0");
+	return 0;
+}
