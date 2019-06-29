@@ -16,11 +16,11 @@ const About = ({ navigation }) => (
       />
       <AppBarText>About</AppBarText>
     </TopAppBar>
-    <View style={{ flex: 1, padding: 16, alignItems: 'center' }}>
+    <View style={{ flex: 1, padding: 16, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={{ fontSize: 16, letterSpacing: 0.5, lineHeight: 24, color: Colors.onBackground }}>
         Developer: Ali Alizadeh
       </Text>
-      <Text style={styles.text}>
+      <Text style={{ fontSize: 16, letterSpacing: 0.5, lineHeight: 24, color: Colors.onBackground }}>
         Student ID: 97440175
       </Text>
     </View>
