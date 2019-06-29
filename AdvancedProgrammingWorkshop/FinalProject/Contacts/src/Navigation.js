@@ -3,12 +3,14 @@ import {
   createStackNavigator,
 } from 'react-navigation'
 import Home from './screens/Home'
-import Contact from './screens/Contact'
+import NewContact from './screens/NewContact'
+import About from './screens/About'
 
 const MainNav = createStackNavigator(
   {
     Home,
-    Contact,
+    NewContact,
+    About,
   }, {
     headerMode: 'none'
   }

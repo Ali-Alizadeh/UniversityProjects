@@ -1,14 +1,7 @@
 import React from 'react';
-import {
-  StyleSheet, View, TouchableNativeFeedback,
-} from 'react-native';
+import { View, TouchableNativeFeedback } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../common/Colors';
-
-
-const styles = StyleSheet.create({
-
-});
 
 
 const NewContactFAB = ({ onPress }) => (
@@ -40,13 +33,13 @@ const NewContactFAB = ({ onPress }) => (
         }}
       >
         <Icon
-          name="add"
+          name="person-add"
           size={24}
           color="#fff"
         />
       </View>
     </TouchableNativeFeedback>
   </View>
-);
+)
 
 export default NewContactFAB;
